@@ -1,10 +1,10 @@
 <div class="row">
-    <div class="col-sm-8">
+    <div class="col-sm-12 col-md-12 col-lg-8">
         <div class="form-group">
             <input type="text" class="form-control" [(ngModel)]="combinedInput" (input)="onInputText($event)">
         </div>
     </div>
-    <div class="col-4" style="text-align: right;">
+    <div class="col-sm-12 col-md-12 col-lg-4" style="text-align: right;">
         <button type="button"><i class="bi bi-search"></i> Search</button> &nbsp;
         <button type="button" (click)="onClear()"><i class="bi bi-x-circle"></i> Clear</button>
     </div>
