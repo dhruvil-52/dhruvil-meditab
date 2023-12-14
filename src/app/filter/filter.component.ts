@@ -6,26 +6,26 @@ import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from
   styleUrls: ['./filter.component.scss']
 })
 export class FilterComponent implements OnChanges {
-  @Input() input1: string = "";
-  @Input() input2: string = "";
-  @Input() input3: string = "";
-  @Input() input4: string = "";
+  @Input() firstName: string = "";
+  @Input() lastName: string = "";
+  @Input() chartNo: string = "";
+  @Input() address1: string = "";
   @Output() emitOutput: EventEmitter<any> = new EventEmitter<any>();
   combinedInput: string = "";
 
   ngOnChanges(): void {
     this.combinedInput = "";
-    if (this.input1) {
-      this.combinedInput = this.combinedInput + '\\' + this.input1;
+    if (this.firstName) {
+      this.combinedInput = this.combinedInput + '\\' + this.firstName;
     }
-    if (this.input2) {
-      this.combinedInput = this.combinedInput + '@' + this.input2;
+    if (this.lastName) {
+      this.combinedInput = this.combinedInput + '@' + this.lastName;
     }
-    if (this.input3) {
-      this.combinedInput = this.combinedInput + '#' + this.input3;
+    if (this.chartNo) {
+      this.combinedInput = this.combinedInput + '#' + this.chartNo;
     }
-    if (this.input4) {
-      this.combinedInput = this.combinedInput + '$' + this.input4;
+    if (this.address1) {
+      this.combinedInput = this.combinedInput + '$' + this.address1;
     }
   }
 

@@ -6,39 +6,39 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  input1: string = "";
-  input2: string = "";
-  input3: string = "";
-  input4: string = "";
+  firstName: string = "";
+  lastName: string = "";
+  chartNo: string = "";
+  address1: string = "";
   str = '';
 
   onEnter(type: string, event: any) {
     switch (type) {
       case "\\":
-        this.input1 = event.target.value
+        this.firstName = event.target.value
         break
       case "@":
-        this.input2 = event.target.value
+        this.lastName = event.target.value
         break
       case "#":
-        this.input3 = event.target.value
+        this.chartNo = event.target.value
         break
       case "$":
-        this.input4 = event.target.value
+        this.address1 = event.target.value
         break
     }
   }
 
   onChange(event: any) {
-    const input1 = document.getElementById('input1') as HTMLInputElement;
-    const input2 = document.getElementById('input2') as HTMLInputElement;
-    const input3 = document.getElementById('input3') as HTMLInputElement;
-    const input4 = document.getElementById('input4') as HTMLInputElement;
+    const firstName = document.getElementById('firstName') as HTMLInputElement;
+    const lastName = document.getElementById('lastName') as HTMLInputElement;
+    const chartNo = document.getElementById('chartNo') as HTMLInputElement;
+    const address1 = document.getElementById('address1') as HTMLInputElement;
 
-    input1.value = "";
-    input2.value = "";
-    input3.value = "";
-    input4.value = "";
+    firstName.value = "";
+    lastName.value = "";
+    chartNo.value = "";
+    address1.value = "";
     let data = { type: '', value: '' };
     for (let i = 0; i < event.length; i++) {
       if (event[i] == "\\" || event[i] == "@" || event[i] == "#" || event[i] == "$") {
@@ -48,16 +48,20 @@ export class AppComponent {
         data.value = data.value + event[i];
         switch (data.type) {
           case "\\":
-            input1.value = data.value;
+            firstName.value = data.value;
+            this.firstName = data.value;
             break
           case "@":
-            input2.value = data.value;
+            lastName.value = data.value;
+            this.lastName = data.value;
             break
           case "#":
-            input3.value = data.value;
+            chartNo.value = data.value;
+            this.chartNo = data.value;
             break
           case "$":
-            input4.value = data.value;
+            address1.value = data.value;
+            this.address1 = data.value;
             break
         }
       }
