@@ -49,19 +49,15 @@ export class AppComponent {
         switch (data.type) {
           case "\\":
             firstName.value = data.value;
-            this.firstName = data.value;
             break
           case "@":
             lastName.value = data.value;
-            this.lastName = data.value;
             break
           case "#":
             chartNo.value = data.value;
-            this.chartNo = data.value;
             break
           case "$":
             address1.value = data.value;
-            this.address1 = data.value;
             break
         }
       }
