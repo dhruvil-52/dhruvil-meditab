@@ -14,8 +14,8 @@ export class FilterComponent implements OnChanges {
   combinedInput: string = "";
 
   ngOnChanges(): void {
-    this.combinedInput = "\\Dhruvil@Talaviya#52$Ahmedabad";
-    // this.combinedInput = "";
+    // this.combinedInput = "\\Dhruvil@Talaviya#52$Ahmedabad";
+    this.combinedInput = "";
     if (this.input1) {
       this.combinedInput = this.combinedInput + '\\' + this.input1;
     }
@@ -33,5 +33,10 @@ export class FilterComponent implements OnChanges {
   onInputText(event: any) {
     let value = event.target.value;
     this.emitOutput.next(value)
+  }
+
+  onClear() {
+    this.combinedInput = "";
+    this.emitOutput.next(this.combinedInput)
   }
 }
