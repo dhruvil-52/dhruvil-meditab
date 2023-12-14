@@ -1,0 +1,14 @@
+<div class="card" [ngClass]="cardClass">
+    <div class="card-body">
+        <h6 class="card-title" *ngIf="title">
+            <span>
+                {{title}}
+            </span> &nbsp; &nbsp; &nbsp; &nbsp;
+            <span style="text-align: right;">
+                {{secondTitle}}
+            </span>
+        </h6>
+        <hr>
+        <ng-content></ng-content>
+    </div>
+</div>
