@@ -1,12 +1,11 @@
-<div class="card mt-3" [ngClass]="cardClass">
+<div class="card mt-3">
+    <div class="card-header" [ngClass]="headerColorClass" *ngIf="title">
+        <div class="row">
+            <div class="col-sm-6"> {{title}}</div>
+            <div class="col-sm-6">{{secondTitle}}</div>
+        </div>
+    </div>
     <div class="card-body">
-        <h6 class="card-title" *ngIf="title">
-            <div class="row">
-                <div class="col-sm-6"> {{title}}</div>
-                <div class="col-sm-6">{{secondTitle}}</div>
-            </div>
-            <hr>
-        </h6>
         <ng-content></ng-content>
     </div>
 </div>

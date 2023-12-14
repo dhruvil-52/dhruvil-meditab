@@ -4,6 +4,10 @@
     height: calc(100vh);
 }
 
+.container {
+    max-width: 1300px !important;
+}
+
 button {
     border-radius: 5px !important;
 }

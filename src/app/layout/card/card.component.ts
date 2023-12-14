@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
 export class CardComponent {
   @Input() title: string;
   @Input() secondTitle: string;
-  @Input() cardClass: string;
+  @Input() headerColorClass: string;
 }
